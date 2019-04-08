@@ -32,6 +32,9 @@ session_start();
       <li class="nav-item">
         <a class="nav-link" href="report.php">Achivement</a>
       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="enroll.php">Enroll</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="details.php">Details</a></li>
         <li class="nav-item">

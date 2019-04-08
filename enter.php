@@ -40,7 +40,7 @@ if(isset($_POST['stbname'])){
     $_SESSION['cid'] =  @mysqli_real_escape_string($con,$_POST['stname']);
 }
    
-$stname =  $_SESSION['cid'];
+@$stname =  $_SESSION['cid'];
 
     
 $sql = "SELECT * from courses c,enrollment e,exam x WHERE c.course_id=e.course_id and e.exam_id = x.exam_id and c.course_id = '$stname'";
