@@ -4,26 +4,26 @@
 		
 		<div id = "container">
 		
-		<img class="img-responsive" width="100%"  height="100%" src="image/e1.jpg">
+		<img class="img-responsive position-sticky" width="100%"  height="100%" src="image/e1.jpg">
     </div>
 </section>
-<br><br>
+
 
 <div class="main-wrapper">
 	<h1>Events</h1>
 </div>
 
-<div class="section13">
+<div class="container">
     <br>
 	<form action='include/marks.inc.php' method="post">	
-        <input class="form-control" type="text" name="head" placeholder="Add heading"><br><br>
+        <input class="form-control" type="text" name="head" placeholder="Add heading"><br>
         
-        <input class="form-control" type="text" name="content" placeholder="Add Content"><br><br>
+         <textarea class="form-control" name="content" rows="3" placeholder="Event Description"></textarea><br>
         
         <input type="file" name="file" placeholder="delete student"><br>
         <button class="btn btn-primary mb-2" name="add">Add Event</button>
 </form>
-</div>
+</div><br><br>
 
 
 

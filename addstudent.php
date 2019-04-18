@@ -51,11 +51,12 @@
                 <td>".$result1['zscore']."</td>
                 <td>".$result1['email']."</td>
                 <td>".$result1['OtherQualification']."</td>";
-            echo "<td><form action='addstudent.php' method=\"post\"><button  class=\"btn btn-primary mb-2\" type=\"submit\" name=\"add$i\">Register</button></form></td></tr>";
+            echo "<td><form action='addstudent.php' method=\"post\"><button  class=\"btn btn-primary mb-2\" type=\"submit\" name=\"add$i\">Register</button></td>
+            <td><button  class=\"btn btn-primary mb-2\" type=\"submit\" name=\"delete$i\">Delete</button></form></td></tr>";
                 
                if(isset($_POST['add'.$i.''])){
                    
-                   $id = 'SE/2016/'.strval($result1['Register_id']);
+                   $id = 'SE/2016/0'.strval($result1['Register_id']);
                    $str = "'$id','".$result1['name']."','".$result1['fullname']."','".$result1['fathername']."','".$result1['mothername']."','".$result1['fatherjob']."','".$result1['address']."','".$result1['dob']."','".$result1['department_id']."','".$result1['phonenumber']."'";
                    
                     $sql = "INSERT INTO student_detail  VALUES ($str)";
@@ -72,6 +73,12 @@
                    $result1 = mysqli_query($con,$sql3);
                    @header("Refresh:0");
                }
+             if(isset($_POST['delete'.$i.''])){
+                 
+                 $sql = "DELETE FROM register WHERE Register_id='".$result1['Register_id']."'";
+                 $result = mysqli_query($con,$sql);
+                 @header("Refresh:0");
+             }
             
         $i++;
         }
